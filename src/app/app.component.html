@@ -1,8 +1,11 @@
-<h1 class="center">{{ title }}</h1>
-
 <div class="container">
+    <h1 class="center">{{ title }} {{ secons }}</h1>
 
-    <div class="">
+    <div class="boxTime">
+        <p class="message">{{ message3 | uppercase }}</p>
+        <input type="number" class="inputTime" id="time" name="time" placeholder="Time control" [(ngModel)]="secons" />
+    </div>
+    <div class="box">
         <form class="form">
             <p class="message" [ngClass]="{'visibility':isError1}">{{ message1 }}</p>
             <input type="number" class="input" id="box1" name="box1" [placeholder]="placeholder" [(ngModel)]="input1" (mousedown)="MouseEnter($event)" (keyup)="OnKey($event)" autofocus (blur)="Validation($event)" tabindex='1' />

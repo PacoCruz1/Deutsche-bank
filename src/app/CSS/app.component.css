@@ -25,9 +25,14 @@ p.message {
 }
 
 .container {
-  width: 50%;
-  height: 20%;
-  margin: 30vh auto;
+  height: 100%;
+}
+
+.container .boxTime {
+  width: auto;
+  height: auto;
+  position: absolute;
+  right: 100px;
   padding: 25px;
   border: 1px solid #bdbcbc;
   border-radius: 7px;
@@ -36,11 +41,7 @@ p.message {
           box-shadow: 7px 5px 9px #9c9a9a;
 }
 
-.container .input,
-.container .result {
-  display: block;
-  width: 50%;
-  height: calc(1.5em + .75rem + 2px);
+.container .boxTime .inputTime {
   padding: .375rem .75rem;
   font-size: 1rem;
   font-weight: 400;
@@ -56,11 +57,48 @@ p.message {
   transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
 }
 
-.container .result {
+.container .boxTime p.message {
+  color: black;
+  font-weight: bold;
+  text-align: center;
+}
+
+.container .box {
+  width: 50%;
+  height: auto;
+  margin: 30vh auto;
+  padding: 25px;
+  border: 1px solid #bdbcbc;
+  border-radius: 7px;
+  background-color: white;
+  -webkit-box-shadow: 7px 5px 9px #9c9a9a;
+          box-shadow: 7px 5px 9px #9c9a9a;
+}
+
+.container .box .input,
+.container .box .result {
+  display: block;
+  width: 50%;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  -webkit-transition: border-color .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
+  transition: border-color .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
+}
+
+.container .box .result {
   width: 42%;
 }
 
-.container .row {
+.container .box .row {
   display: -ms-flexbox;
   display: -webkit-box;
   display: flex;
@@ -68,7 +106,7 @@ p.message {
   flex-wrap: wrap;
 }
 
-.container .line {
+.container .box .line {
   width: 50%;
   height: 1px;
   display: inline-block;
@@ -76,7 +114,7 @@ p.message {
   border: 2px solid black;
 }
 
-.container .equal {
+.container .box .equal {
   font-size: 66px;
   font-weight: bold;
   -webkit-box-flex: 0;
