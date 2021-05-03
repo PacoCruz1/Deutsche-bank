@@ -31,6 +31,26 @@ p {
     }
 }
 
+.flex-column
+{
+    display: flex;
+    flex-direction: column;
+
+    .up
+    {
+        height: 18px;
+    }
+
+    .middle
+    {
+        height: 38px;
+    }
+
+    .down
+    {
+        height: 18px;
+    }
+}
 .input,
 .inputRes 
 {

@@ -1,5 +1,14 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { DataService } from 'src/app/Services/data.service';
+import { InputClass } from '../../Model/InputClass';
+
+enum error
+{
+  required = "This field is empty",
+  div0 = "Do not divide by 0",
+  time = "Time delay"
+}
+
 
 @Component({
   selector: 'app-input',
@@ -8,9 +17,14 @@ import { DataService } from 'src/app/Services/data.service';
 })
 export class InputComponent implements OnInit 
 {
+  private isFocused: boolean;
+  private fieldExists: InputClass;
+
+
   public isError: boolean;
   public message: string;
   public position: string;
+  public value: string;
 
   @Input() type: string;
   @Input() class: string;
@@ -19,30 +33,69 @@ export class InputComponent implements OnInit
   @Input() placeholder: string;
   @Input() isAuto: boolean;
   @Input() index: string;
-  @Input() value: string;
 
   @Output() changeNameSon = new EventEmitter<String>();
 
-  //constructor(private dataService: DataService) { }
+  constructor(public dataService: DataService) { }
 
   ngOnInit(): void 
   {
+    this.isFocused = false;
+  }
+
+  public MouseEnter(e)
+  {
+    this.isError = false;
+    this.IsFocused(e);
+  }
+
+  public OnKey(e)
+  {
+    this.isError = false;
+    this.IsFocused(e);
+  }
+
+  public Validation(e)
+  {
+    if(e.target.value !== "")
+    {
+      if(this.isFocused)
+      {
+        this.fieldExists.valueId = e.target.value;
+        this.isFocused = false;
+      }
+      else
+      {
+        var newInput = new InputClass(e.target.id, e.target.value, true);
+        this.dataService.field.push(newInput);    
+    }
+      }
+      
+    else
+    {
+      if(e.target.id === "box1")
+      {
+        this.message = error.required;
+      }
+      else if(e.target.id === "box1")
+      {
+        this.message = error.div0;
+      }
+      this.isError = true;
+    }
     
   }
 
-  MouseEnter(e)
+  private IsFocused(e)
   {
-    return;
-  }
-
-  OnKey(e)
-  {
-    return;
-  }
-
-  Validation(e)
-  {
-    return;
+    this.dataService.field.forEach((field) =>
+    {
+      if(field.id === e.target.id && field.isFinish)
+      {
+        this.isFocused = true;
+        this.fieldExists = field;
+      }
+    });
   }
 
 

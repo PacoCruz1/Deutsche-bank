@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { InputClass } from '../Model/InputClass'
 
 @Injectable({
   providedIn: 'root'
@@ -7,9 +8,10 @@ import { Injectable } from '@angular/core';
 export class DataService 
 {
 
-  public name: string;
+  public field: Array<InputClass> = new Array();
 
   constructor() { }
+
 }
 
 
