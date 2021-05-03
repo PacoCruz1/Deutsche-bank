@@ -1,0 +1,39 @@
+.navBar
+{
+    min-height: 4rem;
+    position: sticky;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: .5rem 1rem;    
+    background-color: black;
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 5%), inset 0 -1px 0 rgb(0 0 0 / 10%);
+
+    .boxPicture
+    {
+        width: 50px;
+        height: 50px;
+        display: inline-block;
+        padding-top: .3125rem;
+        padding-bottom: .3125rem;
+        margin-right: 1rem;
+        font-size: 1.25rem;
+        line-height: inherit;
+        white-space: nowrap;
+
+        .picture
+        {
+            display: block!important;
+            background-image: url('https://www.oroyfinanzas.com/files/2014/12/deutsche-bank-logo.jpeg');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+    }
+}
+
+

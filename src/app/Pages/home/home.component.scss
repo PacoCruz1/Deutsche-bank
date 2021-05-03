@@ -1,0 +1,72 @@
+@mixin Container() 
+{
+    padding: 25px;
+    border: 1px solid #bdbcbc;
+    border-radius: 7px;
+    background-color: white;
+    box-shadow: 7px 5px 9px #9c9a9a;
+}
+
+.box
+{
+    width: 50%;
+    height: auto;
+    margin: 30vh auto;
+    @include Container();
+
+    .row 
+    {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+
+        .line 
+        {
+            width: 50%;
+            height: 1px;
+            display: inline-block;
+            margin-top: 20px;
+            border: 2px solid black;
+        }
+        
+        .equal 
+        {
+            font-size: 66px;
+            font-weight: bold;
+            flex: 0 0 1.333333%;
+            height: 60px;
+            margin: -17px 10px;
+        }
+        .boxResult
+        {
+            width: 42%;
+
+        }
+    }
+}
+
+@media(max-width: 1650px) 
+{
+    .boxResult 
+    {
+        width: 41%;
+    }
+}
+
+@media(max-width: 1555px) 
+{
+    .boxResult 
+    {
+        width: 40%;
+    }
+}
+
+@media(max-width: 1415px) 
+{
+    .box
+    {
+        width: 100%;
+    }
+}
+

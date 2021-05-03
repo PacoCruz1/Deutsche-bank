@@ -1,0 +1,40 @@
+<h1>{{ title }}</h1>
+    <div class="card-small">
+        
+    </div>
+
+    <div class="box">
+        <app-input [type]="'number'"
+                   [class]="'input'"
+                   [id]="'box1'"
+                   [name]="'box1'"
+                   [placeholder]="placeholder"
+                   [index]="'1'"
+                   [value]="input1">   
+        </app-input>      
+    
+
+        <div class="row">
+            <div class="line"></div>
+            <div class="equal">=</div>
+            <div class="boxResult">
+                <app-input [type]="'number'"
+                           [class]="'inputRes'"
+                           [id]="'res'"
+                           [name]="'res'"
+                           [placeholder]="'Result'"
+                           [index]="'-1'"
+                           [value]="result">   
+                </app-input>
+            </div>                
+        </div>
+
+        <app-input [type]="'number'"
+                   [class]="'input'"
+                   [id]="'box2'"
+                   [name]="'box2'"
+                   [placeholder]="placeholder"
+                   [index]="'2'"
+                   [value]="input2">    
+        </app-input>  
+    </div>

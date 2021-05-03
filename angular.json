@@ -1,12 +1,12 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "cli": {
-    "analytics": "3ac26c3f-7500-4a0c-ae45-0211965bf53b"
+    "analytics": "a9dda3a7-a6c8-47f2-9c36-b0c18ceaae7c"
   },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "DeutscheBank": {
+    "PlantillaArranque": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/DeutscheBank",
+            "outputPath": "dist/PlantillaArranque",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -68,18 +68,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "DeutscheBank:build"
+            "browserTarget": "PlantillaArranque:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "DeutscheBank:build:production"
+              "browserTarget": "PlantillaArranque:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "DeutscheBank:build"
+            "browserTarget": "PlantillaArranque:build"
           }
         },
         "test": {
@@ -116,16 +116,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "DeutscheBank:serve"
+            "devServerTarget": "PlantillaArranque:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "DeutscheBank:serve:production"
+              "devServerTarget": "PlantillaArranque:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "DeutscheBank"
+  "defaultProject": "PlantillaArranque"
 }

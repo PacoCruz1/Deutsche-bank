@@ -1,0 +1,20 @@
+<div *ngIf="isError && position == '1'">
+       <p class="message" [ngClass]="{'visibility' : isError, 'invisibility' : !isError}">{{ message }}</p>
+</div>
+
+
+<input [type]="type" 
+       [class]="class" 
+       [id]="id" 
+       [name]="name" 
+       [placeholder]="placeholder" 
+       (mousedown)="MouseEnter($event)" 
+       (keyup)="OnKey($event)" 
+       [autofocus]="isAuto"
+       (blur)="Validation($event)" 
+       [tabindex]='index' 
+       [value]="value"/>
+
+<div *ngIf="isError && position == '2'">
+       <p class="message" [ngClass]="{'visibility' : isError, 'invisibility' : !isError}">{{ message }}</p>
+</div>

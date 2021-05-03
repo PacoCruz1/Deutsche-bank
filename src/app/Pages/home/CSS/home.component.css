@@ -1,0 +1,60 @@
+.box {
+  width: 50%;
+  height: auto;
+  margin: 30vh auto;
+  padding: 25px;
+  border: 1px solid #bdbcbc;
+  border-radius: 7px;
+  background-color: white;
+  -webkit-box-shadow: 7px 5px 9px #9c9a9a;
+          box-shadow: 7px 5px 9px #9c9a9a;
+}
+
+.box .row {
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.box .row .line {
+  width: 50%;
+  height: 1px;
+  display: inline-block;
+  margin-top: 20px;
+  border: 2px solid black;
+}
+
+.box .row .equal {
+  font-size: 66px;
+  font-weight: bold;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 1.333333%;
+          flex: 0 0 1.333333%;
+  height: 60px;
+  margin: -17px 10px;
+}
+
+.box .row .boxResult {
+  width: 42%;
+}
+
+@media (max-width: 1650px) {
+  .boxResult {
+    width: 41%;
+  }
+}
+
+@media (max-width: 1555px) {
+  .boxResult {
+    width: 40%;
+  }
+}
+
+@media (max-width: 1415px) {
+  .box {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=home.component.css.map */
