@@ -7,6 +7,15 @@
     box-shadow: 7px 5px 9px #9c9a9a;
 }
 
+.card-small
+{
+    width: auto;
+    height: auto;
+    position: absolute;
+    right: 100px;
+    @include Container();    
+}
+
 .box
 {
     width: 50%;

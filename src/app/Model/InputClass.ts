@@ -28,7 +28,7 @@ export class InputClass implements IInput
 
     GetIsFinish()
     {
-        return this._id;
+        return this._isFinish;
     }
 
     SetIsFinish(value: boolean)

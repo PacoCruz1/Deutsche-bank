@@ -10,31 +10,20 @@ export class HomeComponent implements OnInit
 {
 
   public title: string;
-  public result: string;
-  public input1: number;
-  public input2: number;
   public placeholder: string;
+  public result: string;
   
-  constructor(private dataServese: DataService) { }
+  
+  constructor(public dataServise: DataService) { }
 
   ngOnInit(): void 
   {
     this.title = 'Divide';
     this.placeholder = "Enter a number";
+    this.dataServise.showTime = this.dataServise.time;
 
   }
 
-  // ChangeName()
-  // {
-  //   this.name = 'Ahora el que cambia el nombre es el Padre';
-  //   this.dataServese.name = this.name;
-  // }
-
-  // ChangeSonName(e: string)
-  // {
-  //   this.name = e;
-  //   this.dataServese.name = this.name;
-  // }
 
 }
 

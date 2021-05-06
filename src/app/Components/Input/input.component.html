@@ -1,8 +1,7 @@
 <div class="flex-column">
        <div class="up" *ngIf="index == '1'">
               <p class="message" [ngClass]="{'visibility' : isError, 'invisibility' : !isError}" *ngIf="isError && index == '1'">{{ message }}</p>
-       </div>
-       
+       </div>             
        
        <div class="middle">
               <input [type]="type" 
@@ -12,10 +11,12 @@
                      [placeholder]="placeholder" 
                      (mousedown)="MouseEnter($event)" 
                      (keyup)="OnKey($event)" 
-                     [autofocus]="isAuto"
+                     (focus)="Focus($event)"
                      (blur)="Validation($event)" 
                      [tabindex]='index' 
-                     [value]="value"/>
+                     [value]="value"
+                     [readonly]="readOnly"
+                     #myDOMElement/>
        </div>
        
        <div class="down" *ngIf="index == '2'">

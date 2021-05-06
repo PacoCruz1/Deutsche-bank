@@ -11,7 +11,7 @@ import { InputComponent } from './Input/input.component';
     InputComponent
   ],
   imports: [
-    CommonModule    
+    CommonModule
   ],
   exports:[
     NavbarComponent,

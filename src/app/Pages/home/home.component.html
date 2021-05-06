@@ -1,6 +1,12 @@
-<h1>{{ title }}</h1>
+<h1 class="center">{{ title }} {{ dataServise.showTime }}</h1>
     <div class="card-small">
-        
+        <app-input [type]="'number'"
+                   [class]="'inputTime'"
+                   [id]="'time'"
+                   [name]="'time'"
+                   [placeholder]="'time control'"
+                   [value]="dataServise.time">   
+        </app-input>  
     </div>
 
     <div class="box">
@@ -22,7 +28,8 @@
                            [id]="'res'"
                            [name]="'res'"
                            [placeholder]="'Result'"
-                           [index]="'-1'">   
+                           [index]="'-1'"
+                           [value]="dataServise.result">   
                 </app-input>
             </div>                
         </div>

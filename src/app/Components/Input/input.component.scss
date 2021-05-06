@@ -31,6 +31,17 @@ p {
     }
 }
 
+.inputTime 
+{
+    @include Input();
+}
+
+
+.focus 
+{
+    outline: -webkit-focus-ring-color auto 1px;
+}
+
 .flex-column
 {
     display: flex;
